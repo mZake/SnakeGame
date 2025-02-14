@@ -1,0 +1,8 @@
+# Build Files
+build/
+
+# Binaries
+*.exe
+
+# IDEs
+.vscode/
