@@ -1,8 +1,8 @@
 #include <iostream>
-#include <random>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include "Game.hpp"
+#include "Random.hpp"
 
 void Game::Init()
 {
@@ -177,8 +177,8 @@ void Game::SpawnApples()
 
         do
         {
-            apple.SetX(RandomInRange(1, 18) * Grid);
-            apple.SetY(RandomInRange(1, 10) * Grid);
+            apple.SetX(Random::Get(1, 18) * Grid);
+            apple.SetY(Random::Get(1, 10) * Grid);
         }
         while (!AppleHasValidPosition(apple));
 
@@ -252,13 +252,4 @@ bool Game::AppleHasValidPosition(Apple apple)
     }
 
     return true;
-}
-
-int Game::RandomInRange(int min, int max)
-{
-    std::random_device device;
-    std::mt19937 generator(device());
-    std::uniform_int_distribution<int> distributor(min, max);
-
-    return distributor(generator);
 }

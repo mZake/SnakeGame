@@ -25,7 +25,6 @@ public:
     void DrawScore();
     void DrawBackground();
     bool AppleHasValidPosition(Apple apple);
-    int RandomInRange(int min, int max);
 
 private:
     bool mRunning;
