@@ -24,13 +24,13 @@ The following tools are required:
 
 ## Build Instructions
 Clone the repository:
-```
+```sh
 git clone https://github.com/mZake/SnakeGame.git
 cd SnakeGame
 ```
 
 Create a build directory and compile the project:
-```
+```sh
 mkdir build
 cd build
 cmake ..
