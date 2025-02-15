@@ -223,12 +223,12 @@ void Game::DrawBackground()
         for (int x = 0; x < Config::ScreenWidth; x += Grid)
         {
             SDL_Rect rect {x, y, Grid, Grid};
-            int modValue = Grid * 2;
+            const int ModValue = Grid * 2;
 
             if (y == 0 || y == LimitY || x == 0 || x == LimitX)
                 SDL_RenderCopy(mRenderer, texture2, nullptr, &rect);
 
-            else if ((y % modValue == 0 && x % modValue == 0) || (y % modValue != 0 && x % modValue != 0))
+            else if ((y % ModValue == 0 && x % ModValue == 0) || (y % ModValue != 0 && x % ModValue != 0))
                 SDL_RenderCopy(mRenderer, texture0, nullptr, &rect);
 
             else

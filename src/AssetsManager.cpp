@@ -6,7 +6,7 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
 {
     std::filesystem::directory_iterator files(directory);
 
-    for (auto &file : files)
+    for (const auto &file : files)
     {
         if (!file.is_regular_file())
             continue;
@@ -45,10 +45,10 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
 
 void AssetsManager::UnloadAssets()
 {
-    for (auto &texture : mTextures)
+    for (const auto &texture : mTextures)
         SDL_DestroyTexture(texture.second);
 
-    for (auto& font : mFonts)
+    for (const auto& font : mFonts)
         TTF_CloseFont(font.second);
 
     mTextures.clear();

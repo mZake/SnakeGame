@@ -8,13 +8,13 @@ void Apple::Reset()
     mVisible = false;
 }
 
-void Apple::Draw(SDL_Renderer* renderer, const AssetsManager& textureManager)
+void Apple::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager)
 {
     if (!mVisible)
         return;
 
     const int Grid = Config::GridSize;
-    SDL_Texture* appleTexture = textureManager.GetTexture("Apple");
+    SDL_Texture* appleTexture = assetsManager.GetTexture("Apple");
     SDL_Rect rect {mPosX, mPosY, Grid, Grid};
 
     SDL_RenderCopy(renderer, appleTexture, nullptr, &rect);

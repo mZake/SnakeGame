@@ -30,9 +30,9 @@ void Snake::Reset()
 
 void Snake::Move()
 {
+    const int Grid = Config::GridSize;
     int posX = mBody.front().x;
     int posY = mBody.front().y;
-    const int Grid = Config::GridSize;
 
     if (mNextDirection != Direction::None)
     {
@@ -118,7 +118,7 @@ void Snake::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager)
         SDL_Rect nextSegment = mBody[i + 1];
         SDL_Rect lastSegment = mBody[i - 1];
 
-        if ((nextSegment.x != lastSegment.x) && (nextSegment.y != lastSegment.y))
+        if (nextSegment.x != lastSegment.x && nextSegment.y != lastSegment.y)
         {
             if ((nextSegment.x > segment.x && lastSegment.y < segment.y) ||
                 (nextSegment.y < segment.y && lastSegment.x > segment.x))
