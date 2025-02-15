@@ -24,13 +24,13 @@ The following tools are required:
 
 ## Build Instructions
 Clone the repository:
-```
+```sh
 git clone https://github.com/mZake/SnakeGame.git
 cd SnakeGame
 ```
 
 Create a build directory and compile the project:
-```
+```sh
 mkdir build
 cd build
 cmake ..
@@ -42,4 +42,4 @@ The compiled binary will be generated in the project root directory.
 ---
 
 ## Note
-Make sure the `assets` folder is located in the same folder as the compiled binary!
+Make sure the `assets` folder is located in the same directory as the compiled binary!
