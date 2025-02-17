@@ -56,7 +56,7 @@ void Game::Run()
     {
         frameStart = SDL_GetTicks64();
 
-        CleanScene();
+        ClearScene();
         HandleEvents();
     
         if (!mPaused)
@@ -93,7 +93,7 @@ void Game::RenderScene()
     SDL_RenderPresent(mRenderer);
 }
 
-void Game::CleanScene()
+void Game::ClearScene()
 {
     SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 0);
     SDL_RenderClear(mRenderer);

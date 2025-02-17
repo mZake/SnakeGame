@@ -16,7 +16,7 @@ public:
     void Run();
     void Exit();
     void RenderScene();
-    void CleanScene();
+    void ClearScene();
     void HandleEvents();
     void HandleCollisions();
     void MoveSnake();
