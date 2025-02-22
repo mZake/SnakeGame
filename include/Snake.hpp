@@ -22,7 +22,7 @@ public:
     void Move();
     void Grow();
     void Turn(Direction direction);
-    void Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager);
+    void Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager) const;
     bool IsSelfOrWallColliding() const;
     int PosX() const;
     int PosY() const;

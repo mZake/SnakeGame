@@ -27,7 +27,6 @@ void Game::Init()
 
     mWindow = SDL_CreateWindow(Config::GameTitle, Config::ScreenX, Config::ScreenY,
                                Config::ScreenWidth, Config::ScreenHeight, Config::WindowFlags);
-
     if (!mWindow)
     {
         std::cerr << "Failed to create window: " << SDL_GetError() << std::endl;
@@ -36,7 +35,6 @@ void Game::Init()
     }
 
     mRenderer = SDL_CreateRenderer(mWindow, -1, Config::RendererFlags);
-
     if (!mRenderer)
     {
         std::cerr << "Failed to create renderer: " << SDL_GetError() << std::endl;
@@ -72,7 +70,6 @@ void Game::Run()
         RenderScene();
 
         frameTime = SDL_GetTicks64() - frameStart;
-
         if (frameTime < FrameDuration)
             SDL_Delay(FrameDuration - frameTime);
     }

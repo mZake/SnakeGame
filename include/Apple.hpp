@@ -9,7 +9,7 @@ public:
     Apple() : mPosX(0), mPosY(0), mVisible(false) {}
 
     void Reset();
-    void Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager);
+    void Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager) const;
     void SetX(int pos);
     void SetY(int pos);
     void SetVisibility(bool visible);

@@ -18,7 +18,6 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
         if (extension == ".png")
         {
             SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());
-
             if (!texture)
             {
                 std::cerr << "Failed to load texture " << path << ": " << SDL_GetError() << std::endl;
@@ -31,7 +30,6 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
         if (extension == ".ttf")
         {
             TTF_Font* font = TTF_OpenFont(path.c_str(), 24);
-
             if (!font)
             {
                 std::cerr << "Failed to load font " << path << ": " << SDL_GetError() << std::endl;
@@ -55,10 +53,9 @@ void AssetsManager::UnloadAssets()
     mFonts.clear();
 }
 
-SDL_Texture* AssetsManager::GetTexture(std::string textureId) const
+SDL_Texture* AssetsManager::GetTexture(const std::string& textureId) const
 {
     auto texture = mTextures.find(textureId);
-
     if (texture == mTextures.end())
     {
         std::cerr << textureId << " is an invalid texture identifier!" << std::endl;
@@ -68,10 +65,9 @@ SDL_Texture* AssetsManager::GetTexture(std::string textureId) const
     return texture->second;
 }
 
-TTF_Font* AssetsManager::GetFont(std::string fontId) const
+TTF_Font* AssetsManager::GetFont(const std::string& fontId) const
 {
     auto font = mFonts.find(fontId);
-
     if (font == mFonts.end())
     {
         std::cerr << fontId << " is an invalid font identifier!" << std::endl;

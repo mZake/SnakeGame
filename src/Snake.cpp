@@ -82,7 +82,7 @@ void Snake::Turn(Direction direction)
     mNextDirection = direction;
 }
 
-void Snake::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager)
+void Snake::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager) const
 {
     SDL_Texture* curveTexture = assetsManager.GetTexture("SnakeCurve");
     SDL_Texture* headTexture = assetsManager.GetTexture("SnakeHead");

@@ -11,8 +11,8 @@ class AssetsManager
 public:
     void LoadAssets(SDL_Renderer* renderer, std::filesystem::path path);
     void UnloadAssets();
-    SDL_Texture* GetTexture(std::string textureId) const;
-    TTF_Font* GetFont(std::string fontId) const;
+    SDL_Texture* GetTexture(const std::string& textureId) const;
+    TTF_Font* GetFont(const std::string& fontId) const;
 
 private:
     std::unordered_map<std::string, SDL_Texture*> mTextures;

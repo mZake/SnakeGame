@@ -8,7 +8,7 @@ void Apple::Reset()
     mVisible = false;
 }
 
-void Apple::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager)
+void Apple::Draw(SDL_Renderer* renderer, const AssetsManager& assetsManager) const
 {
     if (!mVisible)
         return;
