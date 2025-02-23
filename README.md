@@ -1,6 +1,6 @@
 ## About
-This is a copy of the classical snake game made in C++ using SDL2.
-Control the snake to eat apples and grow, but don't hit the walls or yourself!
+This is a clone of the classical snake game made with C++ and SDL2.
+Control the snake to eat apples and grow, but avoid hitting the walls or yourself!
 
 ![Image](images/Screenshot.PNG)
 
@@ -23,6 +23,8 @@ The following tools are required:
 ---
 
 ## Build Instructions
+For **Windows** systems, you can download the precompiled binaries [here](releases/tag/v1.0.0).
+
 Clone the repository:
 ```sh
 git clone https://github.com/mZake/SnakeGame.git
