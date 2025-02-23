@@ -23,7 +23,7 @@ The following tools are required:
 ---
 
 ## Build Instructions
-For **Windows** systems, you can download the precompiled binaries [here](releases/tag/v1.0.0).
+For **Windows** systems, you can download the precompiled binaries [here](https://github.com/mZake/SnakeGame/releases).
 
 Clone the repository:
 ```sh
