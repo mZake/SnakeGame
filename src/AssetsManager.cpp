@@ -6,7 +6,7 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
 {
     std::filesystem::directory_iterator files(directory);
 
-    for (const auto &file : files)
+    for (const auto& file : files)
     {
         if (!file.is_regular_file())
             continue;
@@ -26,7 +26,6 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
 
             mTextures.emplace(assetId, texture);
         }
-
         if (extension == ".ttf")
         {
             TTF_Font* font = TTF_OpenFont(path.c_str(), 24);
@@ -43,7 +42,7 @@ void AssetsManager::LoadAssets(SDL_Renderer* renderer, std::filesystem::path dir
 
 void AssetsManager::UnloadAssets()
 {
-    for (const auto &texture : mTextures)
+    for (const auto& texture : mTextures)
         SDL_DestroyTexture(texture.second);
 
     for (const auto& font : mFonts)

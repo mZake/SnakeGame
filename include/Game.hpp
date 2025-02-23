@@ -15,6 +15,8 @@ public:
     void Init();
     void Run();
     void Exit();
+
+private:
     void RenderScene();
     void ClearScene();
     void HandleEvents();
