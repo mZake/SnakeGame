@@ -3,35 +3,33 @@ project(Snake)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+cmake_policy(SET CMP0135 NEW)
 
 include(FetchContent)
 
-find_package(SDL2 REQUIRED)
+find_package(SDL2)
 if (NOT SDL2_FOUND)
     FetchContent_Declare(
         SDL2
-        URL https://github.com/libsdl-org/SDL.git
-        TAG release-2.32.0
+        URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.0/SDL2-2.32.0.zip
     )
     FetchContent_MakeAvailable(SDL2)
 endif()
 
-find_package(SDL2_image REQUIRED)
+find_package(SDL2_image)
 if (NOT SDL2_image_FOUND)
     FetchContent_Declare(
         SDL2_image
-        URL https://github.com/libsdl-org/SDL2_image.git
-        TAG release-2.8.5
+        URL https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.5/SDL2_image-2.8.5.zip
     )
     FetchContent_MakeAvailable(SDL2_image)
 endif()
 
-find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_ttf)
 if (NOT SDL2_ttf_FOUND)
     FetchContent_Declare(
         SDL2_ttf
-        URL https://github.com/libsdl-org/SDL_ttf.git
-        TAG release-2.24.0
+        URL https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.24.0/SDL2_ttf-2.24.0.zip
     )
     FetchContent_MakeAvailable(SDL2_ttf)
 endif()
